@@ -1,0 +1,313 @@
+/*transition: 0.3s ALWAYS*/
+
+html {
+    background-color: #000;
+}
+
+body {
+    background-color: #000;
+}
+
+a {
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+a:hover {
+    transition: 0.3s;
+    text-decoration: none;
+    color: #0f33ff;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: #0f33ff;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #091e94;
+    transition: 0.3s;
+}
+
+button:active {
+    background-color: #07135b;
+}
+
+button:focus {
+    border: none;
+    outline: 0;
+}
+
+.button_blue {
+    background-color: #1769ff;
+}
+
+.button_pink {
+    background-color: #ea4c89;
+}
+
+.button_pink:hover {
+    background-color: #a31d51;
+}
+
+.button_pink:active {
+    background-color: #6b082e;
+}
+
+.slide {
+    background-color: #000;
+}
+
+.slide-header {
+    width: 100%;
+}
+
+.big-header {
+    font-family: 'Proxima', sans-serif;
+    font-weight: 700;
+    font-size: 82px;
+    color: #fff;
+    line-height: 70px;
+}
+
+.mid-header {
+    font-family: 'Proxima', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+}
+
+.min-header {
+    font-family: 'Proxima', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.button-text {
+    font-family: 'Proxima', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.text-svg {
+    margin-left: 10px;
+}
+
+.button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    object-fit: contain;
+}
+
+.nav {
+    margin: 20px 0;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-header {
+    margin-bottom: 0;
+    margin-left: 10px;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+}
+
+.nav-button {
+    position: relative;
+    left: 30px;
+}
+
+.hire-button {
+    width: 90px;
+    height: 30px;
+}
+
+.burger {
+    float: right;
+}
+
+.burger path {
+    transition: 0.3s;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+.burger:hover path {
+    transition: 0.3s;
+    fill: #0f33ff;
+}
+
+.main__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.slide1__main {
+    position: relative;
+}
+
+.slide1__main:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 76%;
+    height: 1px;
+    bottom: 1px;
+    left: 18%;
+    background-color: #242525;
+}
+
+.slide1__main:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 10px;
+    bottom: -8px;
+    left: 20%;
+    background-color: #0f33ff;
+}
+
+.text1__button {
+    margin-top: 30px;
+    width: 90px;
+    height: 30px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.text1__button_animate {
+    width: 105px;
+    transition: 0.3s;
+}
+
+.button1__text {
+    transition: 0.3s;
+}
+
+.button1__text_position {
+    position: absolute;
+    left: -15px;
+    top: 5px;
+}
+
+.button1__text_animate {
+    left: 12px;
+    transition: 0.3s;
+}
+
+.slide1__extra {
+    margin-top: 30px;
+}
+
+.extra1__link * {
+    transition: 0.3s;
+}
+
+.extra1__link:hover * {
+    transition: 0.3s;
+    color: #fff;
+}
+
+.link1__header {
+    color: #242424;
+}
+
+.link1__description {
+    font-family: 'Proxima', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #242424;
+}
+
+.slide2__header {
+    margin: 40px 0 50px;
+    position: relative;
+    left: -20px;
+}
+
+.slide2__slider {
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-around
+}
+
+.slider-image {
+    width: 30%;
+}
+
+.button3__text {
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.slide3__extra {
+    width: 100%;
+    margin: -100px 0 50px;
+}
+
+.picture3__header {
+    position: relative;
+    bottom: -105px;
+    left: 10px;
+    margin: 0;
+}
+
+.map {
+    width: 100%;
+    filter: grayscale(100%);
+    position: relative;
+    left: 70px;
+}
+
+.slide4__contacts {
+    height: 350px;
+    background-color: #0b0b0b;
+    box-shadow: 10px 0 24px 0 rgba(0,0,0,0.75);
+    position: absolute;
+    top: -550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.contacts4__link {
+    font-family: 'Proxima', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+.contacts4__button {
+    width: 130px;
+    height: 40px;
+}
