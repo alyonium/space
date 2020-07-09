@@ -8,6 +8,10 @@ body {
     background-color: #000;
 }
 
+img {
+    object-fit: contain;
+}
+
 a {
     transition: 0.3s;
     text-decoration: none;
@@ -256,8 +260,34 @@ button:focus {
     justify-content: space-around
 }
 
+.slider-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .slider-image {
-    width: 30%;
+    width: 275px;
+}
+
+.left-arrow, .right-arrow {
+    cursor: pointer;
+}
+
+.slick-slide {
+    transform: scale(0.7);
+    transition: 0.3s;
+}
+
+.slick-center{
+    transform: scale(1)!important;
+}
+
+.slick-initialized .slick-slide {
+    outline: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .button3__text {
@@ -310,4 +340,12 @@ button:focus {
 .contacts4__button {
     width: 130px;
     height: 40px;
+}
+
+
+@media (max-width: 992px) {
+    .slick-slide {
+        transform: scale(0.6);
+    }
+
 }

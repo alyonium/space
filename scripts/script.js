@@ -16,7 +16,21 @@ $(document).ready(function () {
         $(this).toggleClass('animate__animated animate__pulse');
     })
 
-    //map
+    //slider
+    $('.slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 700,
+        prevArrow: $('.left-arrow'),
+        nextArrow: $('.right-arrow'),
+        centerMode: true,
+        centerPadding: 0,
+        adaptiveHeight: false,
+    })
+
+    //slider center slide
+
+
 
 
 })
