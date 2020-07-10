@@ -238,7 +238,7 @@ button:focus {
     color: #242424;
 }
 
-.link1__description {
+.description {
     font-family: 'Proxima', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -267,6 +267,14 @@ button:focus {
     justify-content: center;
 }
 
+.slider-slide p {
+    display: none;
+}
+
+.slick-center p {
+    display: block!important;
+}
+
 .slider-image {
     width: 275px;
 }
@@ -280,14 +288,24 @@ button:focus {
     transition: 0.3s;
 }
 
-.slick-center{
+.slick-center {
     transform: scale(1)!important;
+    transition: 0.3s;
 }
 
 .slick-initialized .slick-slide {
     outline: 0;
     display: flex;
     flex-direction: column;
+}
+
+.slider-description {
+    text-align: center;
+    color: #fff;
+}
+
+.slider-header {
+    margin: 10px 0;
 }
 
 .button3__text {
