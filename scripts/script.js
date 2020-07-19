@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    //left nav
+
 
     //logo animation
     $('.logo').hover(function(){
@@ -28,9 +30,25 @@ $(document).ready(function () {
         adaptiveHeight: false,
     })
 
-    //slider center slide
+    //checkboxes
 
+    const checkboxes = ['app', 'graphic', 'motion', 'ux', 'web', 'marketing']
 
+    const request = {}
 
+    for(const checkbox of checkboxes) {
+        request[checkbox] = false;
+        $(`#checkbox-${checkbox}`).on('click', function () {
+            request[checkbox] = !request[checkbox]
+            $(this).parent().toggleClass('check-checkbox')
+        })
+    }
+
+    //get data from user
+    $('.request-button').on('click', function () {
+        request.name = $('.name-input').val();
+        request.email = $('.mail-input').val();
+        console.log(request)
+    })
 
 })
