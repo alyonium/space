@@ -6,11 +6,19 @@ $(document).ready(function () {
         const newActiveSlide = $(this).attr('data-slide');
         const currentActiveSlide = $(currentActiveNumber).attr('data-slide');
 
+        if (newActiveSlide == 'slide1') {
+            $('.nav-button').css('opacity', '0');
+        } else {
+            $('.nav-button').css('opacity', '1');
+        }
+
         $(currentActiveNumber).removeClass('number-active');
         $(this).addClass('number-active');
 
-        $(`.${currentActiveSlide}`).css('display', 'none');
-        $(`.${newActiveSlide}`).css('display', 'block');
+        $(`.${currentActiveSlide}`).removeClass('slide-active animate__animated animate__fadeIn');
+        $(`.${newActiveSlide}`).addClass('slide-active animate__animated animate__fadeIn');
+
+        $('.slick-slider').slick('refresh');
     });
 
     //logo animation
