@@ -1,22 +1,28 @@
 $(document).ready(function () {
     //left nav
+    $('body').on('click', '.number-slide:not(.number-active)', function() {
+        const currentActiveNumber = $('.number-active');
 
+        const newActiveSlide = $(this).attr('data-slide');
+        const currentActiveSlide = $(currentActiveNumber).attr('data-slide');
+
+        $(currentActiveNumber).removeClass('number-active');
+        $(this).addClass('number-active');
+
+        $(`.${currentActiveSlide}`).css('display', 'none');
+        $(`.${newActiveSlide}`).css('display', 'block');
+    });
 
     //logo animation
     $('.logo').hover(function(){
         $(this).toggleClass('animate__animated animate__bounceIn')
-    })
+    });
 
     //slide1 button animation
     $('.text1__button').hover(function(){
         $(this).toggleClass('text1__button_animate');
         $('.button1__text').toggleClass('button1__text_animate');
-    })
-
-    //slide3 career animation
-    $('.button3__text').hover(function(){
-        $(this).toggleClass('animate__animated animate__pulse');
-    })
+    });
 
     //slider
     $('.slider').slick({
@@ -28,6 +34,11 @@ $(document).ready(function () {
         centerMode: true,
         centerPadding: 0,
         adaptiveHeight: false,
+    });
+
+    //slide3 career animation
+    $('.button3__text').hover(function(){
+        $(this).toggleClass('animate__animated animate__pulse');
     })
 
     //checkboxes
@@ -46,9 +57,18 @@ $(document).ready(function () {
 
     //get data from user
     $('.request-button').on('click', function () {
-        request.name = $('.name-input').val();
-        request.email = $('.mail-input').val();
-        console.log(request)
-    })
+        if($('form')[0].checkValidity()) {
+            $('form').submit(function (event) {
+                event.preventDefault();
+            });
+            request.name = $('.name-input').val();
+            request.email = $('.mail-input').val();
+            console.log(request)
+        } else {
+            //red borders
+        }
+
+
+    });
 
 })

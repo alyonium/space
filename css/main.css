@@ -475,6 +475,7 @@ button:focus {
     justify-content: space-around;
     align-items: flex-start;
     padding: 0;
+    z-index: 10;
 }
 
 .number-slide {
@@ -484,6 +485,7 @@ button:focus {
     color: #757474;
     font-weight: 300;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .number-active {
@@ -493,6 +495,14 @@ button:focus {
     letter-spacing: 0.4em;
     left: -14px;
     cursor: default;
+}
+
+.slide1 {
+    display: block;
+}
+
+.slide2, .slide3, .slide4, .slide5 {
+    display: none;
 }
 
 @media (max-width: 992px) {
