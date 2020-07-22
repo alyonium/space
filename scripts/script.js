@@ -21,6 +21,11 @@ $(document).ready(function () {
         $('.slick-slider').slick('refresh');
     });
 
+    //burger-menu
+    $('body').on('click', '.burger', function() {
+       $('.nav-line').toggleClass('on');
+    });
+
     //logo animation
     $('.logo').hover(function(){
         $(this).toggleClass('animate__animated animate__bounceIn')

@@ -478,6 +478,12 @@ button:focus {
     align-items: flex-start;
     padding: 0;
     z-index: 10;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.on {
+    opacity: 1;
 }
 
 .number-slide {
