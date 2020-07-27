@@ -2,6 +2,7 @@
 
 html {
     background-color: #000;
+    overflow-x: hidden;
 }
 
 body {
@@ -63,6 +64,7 @@ button:focus {
 .slide {
     background-color: #000;
     display: none;
+    height: 720px;
 }
 
 .slide-header {
@@ -73,7 +75,7 @@ button:focus {
     font-family: 'Proxima', sans-serif;
     font-weight: 700;
     font-size: 82px;
-    color: #fff;
+    color: #eee;
     line-height: 70px;
 }
 
@@ -81,14 +83,14 @@ button:focus {
     font-family: 'Proxima', sans-serif;
     font-weight: 700;
     font-size: 30px;
-    color: #fff;
+    color: #eee;
 }
 
 .min-header {
     font-family: 'Proxima', sans-serif;
     font-weight: 600;
     font-size: 18px;
-    color: #fff;
+    color: #eee;
     text-transform: uppercase;
 }
 
@@ -96,7 +98,7 @@ button:focus {
     font-family: 'Proxima', sans-serif;
     font-weight: 600;
     font-size: 14px;
-    color: #fff;
+    color: #eee;
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -137,8 +139,9 @@ button:focus {
 
 .nav-button {
     position: relative;
-    left: 30px;
+    left: 25px;
     transition: 0.3s;
+    opacity: 0;
 }
 
 .hire-button {
@@ -234,7 +237,7 @@ button:focus {
 
 .extra1__link:hover * {
     transition: 0.3s;
-    color: #fff;
+    color: #eee;
 }
 
 .link1__header {
@@ -251,7 +254,7 @@ button:focus {
 .slide2__header {
     margin: 40px 0 50px;
     position: relative;
-    left: -20px;
+    left: -25px;
 }
 
 .slide2__slider {
@@ -304,7 +307,8 @@ button:focus {
 
 .slider-description {
     text-align: center;
-    color: #fff;
+    color: #eee;
+    max-width: 300px;
 }
 
 .slider-header {
@@ -354,7 +358,7 @@ button:focus {
     font-size: 14px;
     font-weight: 600;
     margin: 0;
-    color: #fff;
+    color: #eee;
     text-decoration: none;
 }
 
@@ -370,7 +374,7 @@ button:focus {
 }
 
 .checkbox {
-    border: 2px solid #fff;
+    border: 2px solid #eee;
     padding: 15px;
     margin: 40px 25px 0;
     width: 200px;
@@ -393,7 +397,7 @@ button:focus {
     font-weight: 400;
     font-size: 18px;
     font-family: 'Proxima', sans-serif;
-    color: #fff;
+    color: #eee;
     margin: 0;
 }
 
@@ -409,8 +413,8 @@ button:focus {
     display: inline-block;
     height: 16px;
     width: 19px;
-    border-left: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+    border-left: 2px solid #eee;
+    border-bottom: 2px solid #eee;
     transform: rotate(-45deg);
     position: absolute;
     left: 20px;
@@ -447,18 +451,18 @@ button:focus {
     font-weight: 300;
     font-size: 30px;
     background-color: #000;
-    color: #fff;
+    color: #eee;
     outline: 0;
     border: 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #eee;
 }
 
 .name-input::placeholder {
-    color: #fff;
+    color: #eee;
 }
 
 .mail-input::placeholder {
-    color: #fff;
+    color: #eee;
 }
 
 .request-button {
@@ -471,19 +475,19 @@ button:focus {
     border-left: 1px solid #242424;
     height: 500px;
     position: absolute;
-    top: 90px;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
     padding: 0;
     z-index: 10;
-    opacity: 0;
+    opacity: 1;
     transition: 0.3s;
 }
 
-.on {
-    opacity: 1;
+.off {
+    opacity: 0;
 }
 
 .number-slide {
@@ -509,9 +513,204 @@ button:focus {
     display: block;
 }
 
-@media (max-width: 992px) {
+@media (min-height: 830px) and (min-width: 1300px) {
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1200px) {
     .slick-slide {
         transform: scale(0.6);
     }
 
+    img[alt="astronaut"] {
+        width: 100%!important;
+    }
+
+    .picture3__header {
+        bottom: -95px;
+    }
+
+    img[alt="winners"],
+    img[alt="philosophy"],
+    img[alt="history"] {
+        width: 95%;
+    }
 }
+
+@media (max-width: 1024px) {
+    .nav-line,
+    .nav-button,
+    .burger,
+    .slide1__main:after,
+    .slide1__main:before {
+        display: none;
+    }
+
+    .slide {
+        display: block;
+        margin: 100px 0;
+        height: 100%;
+    }
+
+    .main__text,
+    .slide1__extra .col-sm-3.offset-sm-2 {
+        margin-left: 10vw;
+    }
+
+    .slide5 {
+        height: 600px;
+    }
+
+    .extra1__link .link1__header,
+    .extra1__link .description,
+    .extra1__link:hover * {
+        color: #757474;
+    }
+
+    .text1__button {
+        margin-top: 30px;
+        width: 105px;
+        height: 30px;
+        position: relative;
+    }
+
+    .button1__text_position {
+        position: absolute;
+        left: 12px;
+        top: 5px;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .slick-slide {
+        transform: scale(1);
+    }
+
+    .logo-header {
+        display: none;
+    }
+
+    .big-header {
+        z-index: 15;
+    }
+
+    img[alt="astronaut"] {
+        opacity: 0.75;
+    }
+
+    .slide2__header {
+        left: -35px;
+    }
+
+    .slider-description {
+        max-width: 250px;
+    }
+
+    .slider-slide p {
+        display: block;
+    }
+
+    .row.w-100.align-items-center.justify-content-center {
+        flex-direction:column;
+    }
+
+    .row.w-100.align-items-center.justify-content-center .col-sm-3 {
+        position: relative;
+        left: -54px;
+    }
+
+    .slide5__header {
+        left: -80px;
+    }
+
+    .picture3__header {
+        bottom: -70px;
+        left: -42px;
+        font-size: 15px;
+        z-index: 20;
+    }
+
+    img[alt="winners"], img[alt="philosophy"], img[alt="history"] {
+        position: relative;
+        left: -45px;
+    }
+
+    .nav-button {
+        left: 0;
+    }
+
+    .slide4__contacts {
+        width: 250px;
+    }
+
+    .map {
+        left: 55px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    img[alt="astronaut"] {
+        position: relative;
+        top: -22px;
+        left: -20px;
+        opacity: 1;
+    }
+
+    .link1__header {
+        font-size: 15px;
+    }
+
+    .text1__header {
+        max-width: 200px;
+    }
+
+    img[alt="left-arrow"] {
+        margin-left: 20px;
+    }
+
+    .slide2__header {
+        left: -70px;
+    }
+
+    img[alt="person"] {
+        width: 120%;
+        position:  relative;
+        top: 150px;
+    }
+
+    .slide3__extra {
+        flex-direction: column;
+
+    }
+
+    .slide3__extra .col-sm-2.offset-sm-2 {
+        margin-left: 0;
+    }
+
+    .slide3__extra .col-sm-2 {
+        position: relative;
+        left: 100px;
+        top: 40px;
+    }
+
+    .picture3__header {
+        top: 5px;
+    }
+
+    .row.w-100.align-items-center.justify-content-center > .checkbox {
+        position: relative;
+        left: 20px;
+    }
+}
+
+
+
+
+

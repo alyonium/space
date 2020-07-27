@@ -21,9 +21,15 @@ $(document).ready(function () {
         $('.slick-slider').slick('refresh');
     });
 
+    //resize
+    $(window).resize(function() {
+        $('.slick-slider').slick('refresh');
+    });
+
+
     //burger-menu
     $('body').on('click', '.burger', function() {
-       $('.nav-line').toggleClass('on');
+       $('.nav-line').toggleClass('off');
     });
 
     //logo animation
@@ -47,6 +53,14 @@ $(document).ready(function () {
         centerMode: true,
         centerPadding: 0,
         adaptiveHeight: false,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+            ]
     });
 
     //slide3 career animation
