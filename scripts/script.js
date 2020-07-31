@@ -55,7 +55,7 @@ $(document).ready(function () {
         adaptiveHeight: false,
         responsive: [
             {
-                breakpoint: 991,
+                breakpoint: 1025,
                 settings: {
                     slidesToShow: 1,
                 }

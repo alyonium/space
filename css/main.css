@@ -120,6 +120,7 @@ button:focus {
 
 .nav {
     margin: 20px 0;
+    /* width:  100%; */
 }
 
 .logo {
@@ -343,9 +344,9 @@ button:focus {
     height: 350px;
     background-color: #0b0b0b;
     box-shadow: 10px 0 24px 0 rgba(0,0,0,0.75);
-    position: absolute;
+    position: relative;
     top: -550px;
-    width: 100%;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -440,6 +441,10 @@ button:focus {
 
 .checkbox input[type="checkbox"]:checked + label::after {
     content: "";
+}
+
+.message {
+    display: none;
 }
 
 .name, .mail {
@@ -540,6 +545,7 @@ button:focus {
     img[alt="history"] {
         width: 95%;
     }
+
 }
 
 @media (max-width: 1024px) {
@@ -558,7 +564,7 @@ button:focus {
     }
 
     .main__text,
-    .slide1__extra .col-sm-3.offset-sm-2 {
+    .slide1__extra .col-3.offset-2 {
         margin-left: 10vw;
     }
 
@@ -585,9 +591,19 @@ button:focus {
         top: 5px;
     }
 
+    .slide3__extra .col-2.offset-2 {
+        margin-left: 100px;
+    }
+
+    .slide4__contacts {
+        width: 837px;
+        top: 30px;
+        left: -490px;
+    }
+
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .slick-slide {
         transform: scale(1);
     }
@@ -620,7 +636,7 @@ button:focus {
         flex-direction:column;
     }
 
-    .row.w-100.align-items-center.justify-content-center .col-sm-3 {
+    .row.w-100.align-items-center.justify-content-center .col-3 {
         position: relative;
         left: -54px;
     }
@@ -646,16 +662,26 @@ button:focus {
     }
 
     .slide4__contacts {
-        width: 250px;
+        width: 621px;
+        left: -363px;
     }
 
     .map {
         left: 55px;
+        width:  100%;
+    }
+
+    .slide3__extra .col-2.offset-2 {
+        margin-left: 15vw;
+    }
+
+    .button-content.request-button {
+        position: relative;
+        margin-bottom: 50px;
     }
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     img[alt="astronaut"] {
         position: relative;
         top: -22px;
@@ -680,37 +706,63 @@ button:focus {
     }
 
     img[alt="person"] {
-        width: 120%;
-        position:  relative;
-        top: 150px;
-    }
-
-    .slide3__extra {
-        flex-direction: column;
-
-    }
-
-    .slide3__extra .col-sm-2.offset-sm-2 {
-        margin-left: 0;
-    }
-
-    .slide3__extra .col-sm-2 {
+        width: 150%;
         position: relative;
-        left: 100px;
+        right: 50px;
+    }
+
+    .slide3__extra .col-2 {
+        position: relative;
         top: 40px;
     }
 
     .picture3__header {
         top: 5px;
+        font-size: 12px;
+        left: -45px;
+    }
+
+    .slide3__extra .col-2.offset-2 {
+        margin-left: 17vw;
+    }
+
+    .text3_header.big-header {
+        max-width: 200px;
     }
 
     .row.w-100.align-items-center.justify-content-center > .checkbox {
         position: relative;
         left: 20px;
     }
+
+    .slide4__contacts {
+        width: 460px;
+        left: -259px;
+    }
 }
 
+@media (max-width: 575px) {
+    .message {
+        display: block;
+        max-width: 300px;
+    }
 
+    .slide {
+        display: none;
+    }
 
+    .col-2 {
+        max-width: 100%;
+    }
 
+    .container {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 
+    .nav .col-2 {
+        align-self: flex-start;
+    }
+}
